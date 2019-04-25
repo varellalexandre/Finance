@@ -1,12 +1,11 @@
 from Cash import *
 
 if __name__=='__main__':
-	a = [2,3,4,5,1,34,12,41,2,3,123,2,3,3,3,3,3,3,3,3]
-	b = [3,2,1,4]
-	ca = CashFlow(cashflow=a)
-	cb = CashFlow(cashflow=b,start=3)
+	a = [2,2,2,2,2,2]
+	b = [-10,1,-2,3,3,3,3,3]
+	ca = cashflow.CashFlow(cashflow=a)
+	cb = cashflow.CashFlow(cashflow=b,start=1)
 	cc = ca+cb
-	print(ca.cashflow)
-	print(cb.cashflow)
-	print(cc.cashflow)
-	print(cb.toPresent(0.1))
+	lista = [cb]
+	cash = cashengineering.CashEngineering(lista)
+	print(cash.TIR()[0])
